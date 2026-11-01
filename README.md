@@ -1,6 +1,12 @@
 # agent-os 🧠
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Case Study](https://img.shields.io/badge/Case_Study-zaynelovecraft.com-6366f1)](https://www.zaynelovecraft.com/work/agent-os)
+[![Article](https://img.shields.io/badge/Deep_Dive-Read_Post-10b981)](https://www.zaynelovecraft.com/articles/filesystem-first-ai-agent-os-cursor-claude)
+
 A filesystem-first personal operating system for Cursor & Claude Code agents — persistent memory (`memory.md`), lean identity context (`context/`), a 3-layer research archive (`research/`), and reusable skills (`.cursor/skills/`).
+
+> 📖 **Read the full architecture write-up:** [Filesystem-First AI Agent OS for Cursor and Claude Code](https://www.zaynelovecraft.com/articles/filesystem-first-ai-agent-os-cursor-claude)
 
 Instead of re-explaining who you are, how your repos are wired, and what mistakes the agent made yesterday, point your editor at one central `OS/` workspace.
 
