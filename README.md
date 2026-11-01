@@ -50,14 +50,31 @@ When a workflow works once, capture it as a `SKILL.md` so you can run `/youtube-
 
 ## Quick Start
 
-```bash
-git clone https://github.com/zaynelovecraft/agent-os.git ~/Repos/OS
-cd ~/Repos/OS
-```
+There's nothing to install. It's a folder of Markdown files that your AI editor reads.
 
-1. Fill in `context/about-me.md` and `context/tools-stack.md`.
-2. Open `~/Repos/OS` in Cursor (or run `claude` from the root).
-3. Correct the agent once — watch it write the rule to `memory.md`.
+**Requirements:** [Cursor](https://cursor.com) or [Claude Code](https://docs.anthropic.com/en/docs/claude-code), plus git.
+
+1. **Clone it** next to your code repos:
+
+   ```bash
+   git clone https://github.com/zaynelovecraft/agent-os.git ~/Repos/OS
+   cd ~/Repos/OS
+   rm -rf .git && git init   # optional: start your own private history
+   ```
+
+2. **Make it yours.** Replace the example content in:
+   - `context/about-me.md`: who you are, what you're working on, how you like answers
+   - `context/tools-stack.md`: your languages, frameworks and services
+   - `AGENTS.md`: the repo map table, so the agent knows where your code lives
+   - `todo.md`: your current tasks
+
+3. **Open it in your editor:**
+   - **Cursor:** File → Open Folder → `~/Repos/OS`. The rule in `.cursor/rules/personal-os.mdc` loads automatically, and skills run with `/youtube-to-os` or `/site-audit` in chat.
+   - **Claude Code:** run `claude` inside `~/Repos/OS`. `CLAUDE.md` loads `AGENTS.md` and `memory.md` automatically.
+
+4. **Test the loop.** Ask "what's on my todo?", then correct the agent on something ("always answer in under 5 lines"). It should add that rule to `memory.md` and follow it from then on.
+
+**Keep it private.** Once you've filled it in, this folder holds personal details. Push it to a private repo, or don't push it at all.
 
 ## License
 

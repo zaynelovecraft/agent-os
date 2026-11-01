@@ -8,6 +8,12 @@ You are working inside my central OS folder. This is my command center — not a
 2. Read `memory.md` for learned preferences and past corrections.
 3. Load only the context files relevant to the task (don't bloat the session).
 
+## Repo map (sibling folders)
+
+| Repo | Path | Notes |
+|------|------|-------|
+| my-app | `../my-app` | Next.js + Postgres |
+
 ## Todo list (`todo.md`)
 
 | When | Do |
