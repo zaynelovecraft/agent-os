@@ -1,0 +1,13 @@
+---
+description: Personal OS workspace rules
+alwaysApply: true
+---
+
+# Personal OS
+
+Before non-trivial tasks:
+1. Read `AGENTS.md`
+2. Read relevant files from `context/`
+3. Read `memory.md` for learned preferences
+
+When corrected by the user, immediately add a rule to `memory.md`.
