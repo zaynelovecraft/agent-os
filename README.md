@@ -4,7 +4,7 @@
 [![Case Study](https://img.shields.io/badge/Case_Study-zaynelovecraft.com-6366f1)](https://www.zaynelovecraft.com/work/agent-os)
 [![Article](https://img.shields.io/badge/Deep_Dive-Read_Post-10b981)](https://www.zaynelovecraft.com/articles/filesystem-first-ai-agent-os-cursor-claude)
 
-A filesystem-first personal operating system for Cursor & Claude Code agents — persistent memory (`memory.md`), lean identity context (`context/`), a 3-layer research archive (`research/`), and reusable skills (`.cursor/skills/`).
+A filesystem-first personal operating system for Cursor, Claude Code & Google Antigravity agents — persistent memory (`memory.md`), lean identity context (`context/`), a 3-layer research archive (`research/`), and reusable skills (`.cursor/skills/`).
 
 > 📖 **Read the full architecture write-up:** [Filesystem-First AI Agent OS for Cursor and Claude Code](https://www.zaynelovecraft.com/articles/filesystem-first-ai-agent-os-cursor-claude)
 
@@ -69,6 +69,7 @@ There's nothing to install. It's a folder of Markdown files that your AI editor 
    - `todo.md`: your current tasks
 
 3. **Open it in your editor:**
+   - **Google Antigravity:** Open `~/Repos/OS` or run `agy`. Antigravity natively loads `AGENTS.md` and reads `memory.md` for workspace rules and continuous correction context.
    - **Cursor:** File → Open Folder → `~/Repos/OS`. The rule in `.cursor/rules/personal-os.mdc` loads automatically, and skills run with `/youtube-to-os` or `/site-audit` in chat.
    - **Claude Code:** run `claude` inside `~/Repos/OS`. `CLAUDE.md` loads `AGENTS.md` and `memory.md` automatically.
 
