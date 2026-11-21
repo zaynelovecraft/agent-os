@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Agent OS workspace structure & SKILL.md frontmatter
+        run: |
+          for required in AGENTS.md CLAUDE.md memory.md todo.md context/about-me.md context/tools-stack.md research/index.md; do
+            test -s "$required" || { echo "Missing or empty: $required"; exit 1; }
+          done
+          for skill in .cursor/skills/*/SKILL.md; do
+            head -n 1 "$skill" | grep -q '^---$' || { echo "Missing YAML frontmatter in $skill"; exit 1; }
+            grep -q '^name:' "$skill" || { echo "Missing name in $skill"; exit 1; }
+            grep -q '^description:' "$skill" || { echo "Missing description in $skill"; exit 1; }
+          done
+          echo "All Agent OS files and skills validated."
